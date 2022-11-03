@@ -22,7 +22,6 @@ function getComputerChoice() {
     
 }
 
-//let playerSelection = "Rock";
 let playerSelection = prompt("Choose Your Character");
 let computerSelection = getComputerChoice();
 
@@ -41,4 +40,19 @@ function playRound(playerSelection, computerSelection) {
         return ("I am the danger. You lose.") }
     else if (playerSelection == "Walter" && computerSelection == "Gus") {
         return ("Never do the same mistake twice, Walter")}
+   }
+
+
+
+   function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Choose Your Character");
+        let computerSelection = getComputerChoice();
+     }
+     function getComputerChoice() {
+        let getChoice = ["Gus", "Hector", "Walter"]; 
+        return getChoice[Math.floor(Math.random() * getChoice.length)];
+        
+    }
+     playRound(playerSelection, computerSelection);
    }
