@@ -1,0 +1,75 @@
+
+html {
+    /*background-color: #093009;*/
+    background-image: linear-gradient(to right, #093009, #0D3E10, #1F6032);
+}
+.form{
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#control{
+    width: 100%;  
+height: 350px;  
+text-align: center;  
+padding: 15px;  
+border: 3px solid #29773E;
+background-color: black;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin-top: 50px;
+}
+
+#test {
+    display: flex;
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 50px;
+}
+
+.walter {
+    background-color: yellow;
+    background-image: url(../images/walter.jpeg);
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+.walter:hover {
+    box-shadow: 0 0 2rem #ffc600;
+    transform: scale(1.1);
+    border-color: #032202;
+    transition: all .07s ease;
+}
+
+.gus {
+    background-image: url(../images/gus.jpeg);
+    background-size: cover;
+    width: 300px;
+    background-position: -50px;
+}
+
+.gus:hover {
+    box-shadow: 0 0 2rem #ffc600;
+    transform: scale(1.1);
+    border-color: #032202;
+    transition: all .07s ease;
+}
+
+.hector {
+    background-image: url(../images/Hector.jpeg);
+    background-size: cover;
+    width: 300px;
+    background-position: -80px;
+}
+
+.hector:hover {
+    box-shadow: 0 0 2rem #ffc600;
+    transform: scale(1.1);
+    border-color: #032202;
+    transition: all .07s ease;
+}

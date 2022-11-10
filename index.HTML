@@ -2,24 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="./script.js"></script>
-    <title>FIRST GAME</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Jesse Get the Keyboard</title>
 </head>
 <body>
+  <div class="header"></div>
 <h1>Gus, Hector, Walter...COOK!</h1>
 <p>Rules are simple: Walter beats Hector, Hector beats Gus, Gus beats Walter. Who will you side with?</p>
 <div class="form">
     <label for="guessField">Who do you align with? Choose Gus, Hector, or Walter and see who comes out on top: </label>
-    <input type="text" id="guessField" class="guessField">
-    <input type="submit" value="Submit guess" class="guessSubmit">
   </div>
+</div>
 
-  <div class="resultParas">
+  <div id="control">
+  <button id="test" class="walter" value="WALTER"></button>
+  <button id="test" class="gus" value="GUS"></button>
+  <button id="test" class="hector" value="HECTOR"></button>
+
+</div>
+
+ <!-- <div class="images">
+    <input  type="image" class="walter" src="./images/walter.jpeg">
+    <input type='image' class="hector" src="./images/Hector.jpeg"></button>
+    <input type='image' class="gus"src="./images/gus.jpeg"></button> 
+  </div>-->
+
+  
+
+  <div id="result">
     <p class="guesses"></p>
     <p class="lastResult"></p>
     <p class="result"></p>
   </div>
-
-<p id="playerScore"></p>
+  
+<div class="score">
+<div>Player Score:<p id="playerScore"> </p></div>
+<div>Computer Score: <p id="computerScore"> </p></div>
+</div>
 </body>
 </html>

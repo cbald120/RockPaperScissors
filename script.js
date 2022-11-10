@@ -27,45 +27,79 @@ function getComputerChoice() {
 }
 
 
+const buttons = document.querySelectorAll('#test')
 
 let playerScore = 0;
 let computerScore = 0;
 let draws = 0;
 
-function playRound(playerSelection, computerSelection) {
+ //playerSelection.window.onload=function(){   let button = document.querySelector('button'); button.addEventListener('click', playRound); }
 
-    playerSelection = prompt("Choose your character").toUpperCase(0);
-    computerSelection = getComputerChoice().toUpperCase(0);
+ buttons.forEach(button =>{
+    button.addEventListener('click', function(){
+        playRound(button.value)
+    })
+})
+
+
+//, computerSelection
+
+function playRound(playerSelection) {
+    playerSelection.stopPropagation;
+    console.log(this.value);
+    let result = "";
+    //console.log(playerSelection)
+
+//playerSelection = prompt("Choose your character").toUpperCase(0);
+
+computerSelection = getComputerChoice().toUpperCase(0);
     if (playerSelection == "GUS" && computerSelection == "WALTER") {
-        return ("If you try to interfere, this becomes a much simpler matter. You win");
+        playerScore += 1;
+        result += ("If you try to interfere, this becomes a much simpler matter. You win");
     } 
     else if (playerSelection == "HECTOR" && computerSelection == "GUS") {
-        return ("Ding ding ding. You WIN");}  
+        playerScore += 1;
+        result += ("Ding ding ding. You WIN");
+        }  
     else if (playerSelection == "WALTER" && computerSelection == "HECTOR"){
-        return ("Ya win Mista White!");
+        playerScore += 1;
+        result += ("Ya win Mista White!");
     }  
     else if (playerSelection === computerSelection) {
-       return ("A tie...This is what comes from blood for blood");} 
+        result += ("A tie...This is what comes from blood for blood");} 
     else if (playerSelection == "GUS" && computerSelection == "HECTOR") {
-        return ("Ding ding ding. You lose");
+        computerScore += 1;
+        result += ("Ding ding ding. You lose");
      }
     else if (playerSelection == "HECTOR" && computerSelection == "WALTER") {
-        return ("I am the danger. You lose.");
+        computerScore += 1;
+        result += ("I am the danger. You lose.");
     }
     else if (playerSelection == "WALTER" && computerSelection == "GUS") {
-        return ("Never do the same mistake twice, Walter");
+        computerScore += 1;
+        result += ("Never do the same mistake twice, Walter");
     }
+    console.log(computerSelection)
+    document.getElementById('result').innerHTML = result
+    document.getElementById('computerScore').innerHTML = computerScore
+    document.getElementById('playerScore').innerHTML = playerScore
+    return
 }
+
+
+const results = document.querySelectorAll('#result');
+const comScore = document.querySelectorAll('#computerScore');
+const plaScore = document.querySelectorAll('#playerScore');
 
 //h1.textContent = result;
 //player.textContent = playerScore;
 //computer.textContent = computerScore;
 
-function game() {
+/*function game() {
     let cont = true;
     while (cont) {
         playRound();
         cont = prompt("Play Again?") === "yes";
 }
 }
-game();
+game();*/
