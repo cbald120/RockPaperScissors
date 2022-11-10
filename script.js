@@ -81,8 +81,8 @@ computerSelection = getComputerChoice().toUpperCase(0);
     }
     console.log(computerSelection)
     document.getElementById('result').innerHTML = result
-    document.getElementById('computerScore').innerHTML = computerScore
-    document.getElementById('playerScore').innerHTML = playerScore
+    document.getElementById('comScore').innerHTML = computerScore
+    document.getElementById('plaScore').innerHTML = playerScore
     return
 }
 

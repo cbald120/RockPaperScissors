@@ -7,22 +7,25 @@
     <title>Jesse Get the Keyboard</title>
 </head>
 <body>
-  <div class="header"></div>
-<h1>Gus, Hector, Walter...COOK!</h1>
-<p>Rules are simple: Walter beats Hector, Hector beats Gus, Gus beats Walter. Who will you side with?</p>
+  <div class="header">
+<h1 class="h1">Gus, Hector, Walter...COOK!</h1></div>
 <div class="form">
-    <label for="guessField">Who do you align with? Choose Gus, Hector, or Walter and see who comes out on top: </label>
+  <p>The rules are simple: Walter beats Hector, Hector beats Gus, Gus beats Walter. Who will you side with?</p>
+
   </div>
 </div>
 
   <div id="control">
-  <button id="test" class="walter" value="WALTER"></button>
-  <button id="test" class="gus" value="GUS"></button>
-  <button id="test" class="hector" value="HECTOR"></button>
+    <div id="w">
+  <button id="test" class="walter" value="WALTER"></button>Walter White</div>
+  <div id="g">
+  <button id="test" class="gus" value="GUS"></button>Gus Fring</div>
+  <div id="h">
+  <button id="test" class="hector" value="HECTOR"></button>Hector Salamanca</div>
 
 </div>
 
- <!-- <div class="images">
+<!-- <div class="images">
     <input  type="image" class="walter" src="./images/walter.jpeg">
     <input type='image' class="hector" src="./images/Hector.jpeg"></button>
     <input type='image' class="gus"src="./images/gus.jpeg"></button> 
@@ -37,8 +40,8 @@
   </div>
   
 <div class="score">
-<div>Player Score:<p id="playerScore"> </p></div>
-<div>Computer Score: <p id="computerScore"> </p></div>
+<div class="playerScore">Player Score:<p id="plaScore"> </p></div>
+<div class="computerScore">Computer Score: <p id="comScore"></p></div>
 </div>
 </body>
 </html>
